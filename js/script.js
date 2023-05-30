@@ -1,5 +1,41 @@
-let random_num = [];
+//Facciamo apparire 5 numeri casuali
 
+//Scriviamo prima l'array con i numeri casuali
+
+let arr_random_num = [];
+
+let random_num = document.getElementById('risultato_fin');
+
+let seconds = 1;
+
+//Scriviamo funzione che genera 5 numeri random
+
+function generate_number(min,max){
+    for(let i=0; i<5; i++){
+        arr_random_num[i] = Math.floor(Math.random() * (max - min + 1) + min);
+
+    }
+    return arr_random_num;
+}
+
+//Invochiamo funzione e stampiamola in pagina
+
+generate_number(1, 100);
+console.log(arr_random_num)
+
+random_num.innerText += arr_random_num;
+
+//Facciamo sparire dopo il timer i numeri
+
+setTimeout(function(){
+    random_num.innerText='';
+}, seconds * 5000)
+
+setTimeout(function(){
+    let messaggio = document.getElementById('messaggio')
+    messaggio.innerHTML += `Ora scrivi uno alla volta i numeri che ricordi`;
+
+}, seconds * 5000)
 
 
 
