@@ -31,11 +31,76 @@ setTimeout(function(){
     random_num.innerText='';
 }, seconds * 5000)
 
+
+
+//Facciamo comparire un messaggio di istruzioni
+
 setTimeout(function(){
-    let messaggio = document.getElementById('messaggio')
+    let messaggio = document.getElementById('messaggio');
     messaggio.innerHTML += `Ora scrivi uno alla volta i numeri che ricordi`;
 
 }, seconds * 5000)
+
+
+//Inseriamo le array vuote da riempire con score user, sbagliate, giuste, totale
+
+let score_user = [];
+
+let score_right = [];
+
+let score_wrong = [];
+
+let tot_score = 0;
+
+//Inseriamo singoli prompt
+
+setTimeout(function(){
+    
+let question_1 = parseInt(prompt('Inserisci il valore del primo numero'));
+let question_2 = parseInt(prompt('Inserisci il valore del secondo numero'));
+let question_3 = parseInt(prompt('Inserisci il valore del terzo numero'));
+let question_4 = parseInt(prompt('Inserisci il valore del quarto numero'));
+let question_5 = parseInt(prompt('Inserisci il valore del quinto numero'));
+
+score_user = [question_1,question_2,question_3,question_4,question_5];
+
+//Inseriamo un ciclo che mi permetta di far ciclare l'array random per pushare nelle array vuote
+
+    for( let i=0; i<arr_random_num.length; i++){
+        let numbers = arr_random_num[i];
+
+        if(score_user.includes(numbers)){
+            score_right.push(score_user[i]);
+            tot_score++
+        }
+        else{
+            score_wrong.push(score_user[i]);
+        }
+    }
+
+    //fare apparire i risultati finali
+
+    let final_result = document.getElementById('risultato_fin');
+
+    final_result.innerHTML += 
+    `<li>Il tuo punteggio ${tot_score}</li>
+    <li>Hai indovinato i numeri ${score_right}</li>
+    <li>Hai sbagliato i numeri ${score_wrong}</li>`;
+
+
+
+
+}, seconds * 7000)
+
+
+//Cambiare il messaggio d'istruzione in un messaggio finale
+
+
+setTimeout(function(){
+    let messaggio = document.getElementById('messaggio');
+    messaggio.innerHTML = `Your score`;
+
+}, seconds * 7000)
 
 
 
