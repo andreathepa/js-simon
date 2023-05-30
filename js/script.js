@@ -2,12 +2,9 @@
 // Creare array
 // Stampare con innerhtml elementi in pagina
 
+
 let numeri = ['3','5','6','11','20'];
-
-console.log(numeri)
-
 stampa_numeri = document.getElementById('numeri');
-
 
 for (i=0; i<numeri.length; i++){
 
@@ -15,13 +12,29 @@ for (i=0; i<numeri.length; i++){
     
     stampa_numeri.innerHTML += `<li>${item}</li>`;
 }
+    
+//Far sparire i numeri dopo 30 secondi (5secondi test)
+
+let seconds = 5;
+
+let interval = setInterval(function(){
+
+
+    if(seconds === 0){
+        clearInterval(interval);
+        stampa_numeri.innerHTML = ``;
+
+
+    }
+    else{
+        seconds--;
+
+    }
+
+}, 1000);
 
 
 
-
-
-
-// Impostare un timer di 30 secondi
 
 // Al termine del timer far sparire i numeri
 
