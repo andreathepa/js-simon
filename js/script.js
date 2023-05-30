@@ -33,10 +33,21 @@ let interval = setInterval(function(){
 
 }, 1000);
 
+let messaggio = document.getElementById('messaggio')
+
+setTimeout(function(){
+
+    messaggio.innerHTML += `Ora scrivi uno alla volta i numeri che ricordi`;
+
+}, 6000)
+
+setTimeout(function(){
+
+    let chiedo_1 = prompt('Dimmi il primo numero che hai visto')
+
+}, 11000)
 
 
-
-// Al termine del timer far sparire i numeri
 
 // Far apparire 5 prompt
 
