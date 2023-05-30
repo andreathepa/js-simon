@@ -33,7 +33,11 @@ let interval = setInterval(function(){
 
 }, 1000);
 
+//Messaggio di istruzioni
+
 let messaggio = document.getElementById('messaggio')
+let chiedo_1;
+let chiedo_2;
 
 setTimeout(function(){
 
@@ -41,11 +45,37 @@ setTimeout(function(){
 
 }, 6000)
 
+//Far apparire i prompt
+
 setTimeout(function(){
 
-    let chiedo_1 = prompt('Dimmi il primo numero che hai visto')
+    chiedo_1 = parseInt(prompt('Dimmi il primo numero che hai visto'));
+
+    if(chiedo_1 == 3){
+        alert('Hai vinto')
+    }
+    else{
+        alert('hai perso')
+    }
+    
 
 }, 11000)
+
+setTimeout(function(){
+
+    chiedo_2 = parseInt(prompt('Dimmi il secondo numero che hai visto'));
+
+    if(chiedo_2 == 5){
+        alert('Hai vinto')
+    }
+    else{
+        alert('hai perso')
+    }
+    
+
+}, 11000)
+
+
 
 
 
