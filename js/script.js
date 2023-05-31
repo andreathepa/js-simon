@@ -83,9 +83,11 @@ score_user = [question_1,question_2,question_3,question_4,question_5];
     let final_result = document.getElementById('risultato_fin');
 
     final_result.innerHTML += 
-    `<li>Il tuo punteggio ${tot_score}</li>
+    `
+    <li>Il tuo punteggio ${tot_score}</li>
     <li>Hai indovinato i numeri ${score_right}</li>
-    <li>Hai sbagliato i numeri ${score_wrong}</li>`;
+    <li>Hai sbagliato i numeri ${score_wrong}</li>
+    `;
 
 
 
@@ -98,7 +100,7 @@ score_user = [question_1,question_2,question_3,question_4,question_5];
 
 setTimeout(function(){
     let messaggio = document.getElementById('messaggio');
-    messaggio.innerHTML = `Your score`;
+    messaggio.innerHTML = `Final score`;
 
 }, seconds * 7000)
 
