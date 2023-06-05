@@ -54,27 +54,97 @@ let tot_score = 0;
 
 //Inseriamo singoli prompt
 
+// setTimeout(function(){
+    
+// let question_1 = parseInt(prompt('Inserisci il valore del primo numero'));
+// let question_2 = parseInt(prompt('Inserisci il valore del secondo numero'));
+// let question_3 = parseInt(prompt('Inserisci il valore del terzo numero'));
+// let question_4 = parseInt(prompt('Inserisci il valore del quarto numero'));
+// let question_5 = parseInt(prompt('Inserisci il valore del quinto numero'));
+
+// score_user = [question_1,question_2,question_3,question_4,question_5];
+
+// //Inseriamo un ciclo che mi permetta di far ciclare l'array random per pushare nelle array vuote
+
+//     for( let i=0; i<arr_random_num.length; i++){
+//         let numbers = arr_random_num[i];
+
+//         if(score_user.includes(numbers)){
+//             score_right.push(score_user[i]);
+//             tot_score++
+//         }
+//         else{
+//             score_wrong.push(score_user[i]);
+//         }
+//     }
+
+//     //fare apparire i risultati finali
+
+//     let final_result = document.getElementById('risultato_fin');
+
+//     final_result.innerHTML += 
+//     `
+//     <li>Il tuo punteggio: ${tot_score}</li>
+//     <li>Hai indovinato i numeri: ${score_right}</li>
+//     <li>Hai sbagliato i numeri: ${score_wrong}</li>
+//     `;
+
+
+
+
+// }, seconds * 7000)
+
+
+//Cambiare il messaggio d'istruzione in un messaggio finale
+
+
+// setTimeout(function(){
+//     let messaggio = document.getElementById('messaggio');
+//     messaggio.innerHTML = `Final score`;
+
+// }, seconds * 7000)
+
+//Inseriamo singoli prompt
 setTimeout(function(){
     
-let question_1 = parseInt(prompt('Inserisci il valore del primo numero'));
-let question_2 = parseInt(prompt('Inserisci il valore del secondo numero'));
-let question_3 = parseInt(prompt('Inserisci il valore del terzo numero'));
-let question_4 = parseInt(prompt('Inserisci il valore del quarto numero'));
-let question_5 = parseInt(prompt('Inserisci il valore del quinto numero'));
+    let question_1 = parseInt(prompt('Inserisci il valore del primo numero'));
+    while (isNaN(question_1)) {
+        question_1 = parseInt(prompt('Il valore inserito non è valido, inserisci un valore numerico'));
+    }
 
-score_user = [question_1,question_2,question_3,question_4,question_5];
+    let question_2 = parseInt(prompt('Inserisci il valore del secondo numero'));
+    while (isNaN(question_2)) {
+        question_2 = parseInt(prompt('Il valore inserito non è valido, inserisci un valore numerico'));
+    }
 
-//Inseriamo un ciclo che mi permetta di far ciclare l'array random per pushare nelle array vuote
+    let question_3 = parseInt(prompt('Inserisci il valore del terzo numero'));
+    while (isNaN(question_3)) {
+        question_3 = parseInt(prompt('Il valore inserito non è valido, inserisci un valore numerico'));
+    }
+
+    let question_4 = parseInt(prompt('Inserisci il valore del quarto numero'));
+    while (isNaN(question_4)) {
+        question_4 = parseInt(prompt('Il valore inserito non è valido, inserisci un valore numerico'));
+    }
+
+    let question_5 = parseInt(prompt('Inserisci il valore del quinto numero'));
+    while (isNaN(question_5)) {
+        question_5 = parseInt(prompt('Il valore inserito non è valido, inserisci un valore numerico'));
+    }
+
+    score_user = [question_1,question_2,question_3,question_4,question_5];
+
+    //Inseriamo un ciclo che mi permetta di far ciclare l'array random per pushare nelle array vuote
 
     for( let i=0; i<arr_random_num.length; i++){
-        let numbers = arr_random_num[i];
+        let random_num = arr_random_num[i];
 
-        if(score_user.includes(numbers)){
-            score_right.push(score_user[i]);
+        if(score_user.includes(random_num)){
+            score_right.push(random_num);
             tot_score++
         }
         else{
-            score_wrong.push(score_user[i]);
+            score_wrong.push(random_num);
         }
     }
 
@@ -89,55 +159,7 @@ score_user = [question_1,question_2,question_3,question_4,question_5];
     <li>Hai sbagliato i numeri: ${score_wrong}</li>
     `;
 
-
-
-
 }, seconds * 7000)
-
-
-//Cambiare il messaggio d'istruzione in un messaggio finale
-
-
-setTimeout(function(){
-    let messaggio = document.getElementById('messaggio');
-    messaggio.innerHTML = `Final score`;
-
-}, seconds * 7000)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
